@@ -1,11 +1,12 @@
 <div class='container'>
-        <div class='jumbotron' ng-show='loading'><h1>Loading.....</h1></div>
-        <h1>{{title}} </h1>
-        <div class='row'>
-                <div class='repeat' ng-repeat="movie in movieList">
-                        <div class="col-md-2”>    
-                                <movie-info-box info="movie"></movie-info-box>
-                        </div>
-                </div>
-        </div>
+	<movie-nav></movie-nav>
+	<div class='jumbotron' ng-show='loading'>
+		<h1>Loading.....</h1>
+	</div>
+	<h1>{{title}}</h1>
+	<div class='row'>
+		<div ng-repeat="movie in movieList">
+			<movie-info-box info="movie"></movie-info-box>
+		</div>
+	</div>
 </div>
